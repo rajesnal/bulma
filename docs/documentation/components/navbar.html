@@ -767,7 +767,9 @@ document.addEventListener('DOMContentLoaded', function () {
         </li>
         <li>
           a container for almost <strong>anything</strong> you want, like a <code>field</code>
-          {% highlight html %}{{ navbar_item_other_example }}{% endhighlight %}
+          <div class="highlight-full">
+            {% highlight html %}{{ navbar_item_other_example }}{% endhighlight %}
+          </div>
         </li>
       </ul>
       <p>
@@ -800,11 +802,7 @@ document.addEventListener('DOMContentLoaded', function () {
       </p>
     </div>
 
-    <div class="bd-example is-paddingless">
-      {{navbar_transparent_example}}
-    </div>
-
-    {% highlight html %}{{navbar_transparent_example}}{% endhighlight %}
+    {% include snippet.html content=navbar_transparent_example paddingless=true horizontal=true more=true %}
 
     {% include anchor.html name="Dropdown menu" %}
 
@@ -1020,6 +1018,7 @@ document.addEventListener('DOMContentLoaded', function () {
       </p>
       <ul>
         <li><code>is-primary</code></li>
+        <li><code>is-link</code></li>
         <li><code>is-info</code></li>
         <li><code>is-success</code></li>
         <li><code>is-warning</code></li>
@@ -1035,6 +1034,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <div class="bd-example is-paddingless">
       {% include examples/navbar-color.html color="primary" %}
+    </div>
+
+    <div class="bd-example is-paddingless">
+      {% include examples/navbar-color.html color="link" %}
     </div>
 
     <div class="bd-example is-paddingless">
